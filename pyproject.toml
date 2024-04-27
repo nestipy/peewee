@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "nestipy-peewee"
+version = "0.1.0"
+description = ""
+authors = ["tsiresymila <tsiresymila@gmail.com>"]
+readme = "README.md"
+packages = [{include = "nestipy_peewee", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nestipy-dynamic-module = "^0.1.4"
+peewee = "^3.17.3"
+nestipy = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+nestipy-cli = "^0.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
