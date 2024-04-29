@@ -578,13 +578,13 @@ files = [
 
 [[package]]
 name = "nestipy"
-version = "0.2.8"
+version = "0.2.9"
 description = "Nestipy is a Python framework built on top of BlackSheep that follows the modular architecture of NestJS"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "nestipy-0.2.8-py3-none-any.whl", hash = "sha256:7db795ea2c92aa8536e257192e823b8657cb1c1061aaad0d00b8244f0e852cdd"},
-    {file = "nestipy-0.2.8.tar.gz", hash = "sha256:8ea79e38297f2bc669cc1a7bfcfeca2d08dfbfaa982d8a39ad9ffeaf9a5ba77d"},
+    {file = "nestipy-0.2.9-py3-none-any.whl", hash = "sha256:7655ec945e41a7bafe44cbc372b3d9493e25be9199e4037d75f56dc14331d4db"},
+    {file = "nestipy-0.2.9.tar.gz", hash = "sha256:7a2cc7c2f2df4b9fed6e7614dd02cd46f47c0244ace41a6e911904918bf61b56"},
 ]
 
 [package.dependencies]
@@ -593,7 +593,7 @@ blacksheep = ">=2.0.7,<3.0.0"
 fastapi = ">=0.110.0,<0.111.0"
 minijinja = ">=2.0.1,<3.0.0"
 nestipy-dynamic-module = "0.1.7"
-nestipy-ioc = ">=0.1.30,<0.2.0"
+nestipy-ioc = ">=0.1.31,<0.2.0"
 nestipy-metadata = ">=0.1.1,<0.2.0"
 pyee = ">=11.1.0,<12.0.0"
 python-socketio = ">=5.11.1,<6.0.0"
@@ -624,6 +624,21 @@ minijinja = ">=2.0.1,<3.0.0"
 questionary = ">=2.0.1,<3.0.0"
 
 [[package]]
+name = "nestipy-config"
+version = "0.1.1"
+description = ""
+optional = false
+python-versions = "<4.0,>=3.10"
+files = [
+    {file = "nestipy_config-0.1.1-py3-none-any.whl", hash = "sha256:5035592e64e9a8a0eddc00d0770079864d86b969bf6007b6fc6ae7370cfd47c6"},
+    {file = "nestipy_config-0.1.1.tar.gz", hash = "sha256:9f2957f5802080586be56a4f59c6193b9c60a2e057dcf4e640304a45f06c3dad"},
+]
+
+[package.dependencies]
+nestipy = ">=0.2.9,<0.3.0"
+python-dotenv = ">=1.0.1,<2.0.0"
+
+[[package]]
 name = "nestipy-dynamic-module"
 version = "0.1.7"
 description = ""
@@ -640,17 +655,17 @@ nestipy-metadata = ">=0.1.1,<0.2.0"
 
 [[package]]
 name = "nestipy-ioc"
-version = "0.1.30"
+version = "0.1.31"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "nestipy_ioc-0.1.30-py3-none-any.whl", hash = "sha256:8a2414f61a4bfc043b0d0f12bc4afe00486f6dc49456321dcdbe6a4db19ba278"},
-    {file = "nestipy_ioc-0.1.30.tar.gz", hash = "sha256:8d0dcdf46fbb1d0a7fd65bdd52dc1829fb0c323b5badb638bf3b81697d4d774e"},
+    {file = "nestipy_ioc-0.1.31-py3-none-any.whl", hash = "sha256:75a58514ce2f0c57a26deaf440ccb7bf6ac056fa90bfd4a9238c483b802b12e3"},
+    {file = "nestipy_ioc-0.1.31.tar.gz", hash = "sha256:c064568d7907f322f58a97cf6b0fd757612b559952833ded0743272dccd77e6e"},
 ]
 
 [package.dependencies]
-nestipy-metadata = ">=0.1.0,<0.2.0"
+nestipy-metadata = "0.1.1"
 pydantic = ">=2.7.0,<3.0.0"
 
 [[package]]
@@ -1467,4 +1482,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "00e837c1a0f652838c7cb5eb9eee8110bd75e1f38dbc7877362dff779d131e33"
+content-hash = "ab2dce05afa5316fa036522f0014e48f204a6ebabcb3c24806f86391f416eaf0"
