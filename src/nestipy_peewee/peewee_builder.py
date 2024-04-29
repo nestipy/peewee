@@ -1,7 +1,7 @@
-from dataclasses import dataclass, field
-from typing import Literal, Union
+from dataclasses import dataclass
+from typing import Literal
 
-from nestipy_dynamic_module import ConfigurableModuleBuilder
+from nestipy_dynamic_module import ConfigurableModuleBuilder, DynamicModule
 
 
 @dataclass
@@ -15,4 +15,12 @@ class PeeweeConfig:
     # options: dict = field(default_factory=lambda: {})
 
 
-ConfigurableModuleClass, PEEWEE_DB_CONFIG = ConfigurableModuleBuilder[PeeweeConfig]().set_method('for_root').build()
+def extra_callback(dynamic_module: DynamicModule, extras: dict):
+    if extras.get('is_global') is not None:
+        dynamic_module.is_global = extras.get('is_global')
+
+
+ConfigurableModuleClass, PEEWEE_DB_CONFIG = ConfigurableModuleBuilder[PeeweeConfig]() \
+    .set_method('for_root') \
+    .set_extras({'is_global': True}, extra_callback) \
+    .build()

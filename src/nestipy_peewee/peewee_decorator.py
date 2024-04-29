@@ -9,8 +9,8 @@ from .peewee_meta import PeeweeMetadata
 def Model() -> Callable[[Type], BaseModel]:
     decorator = SetMetadata(PeeweeMetadata.ModelMeta, True)
 
-    def class_decor(cls: Type) -> BaseModel:
+    def class_decorator(cls: Type) -> BaseModel:
         cls = decorator(cls)
         return cast(BaseModel, cls)
 
-    return class_decor
+    return class_decorator

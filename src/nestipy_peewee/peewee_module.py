@@ -1,7 +1,6 @@
 import inspect
 from dataclasses import asdict
 from typing import Type
-
 from nestipy.common import Module
 from nestipy_dynamic_module import NestipyModule
 from nestipy_ioc import Inject
@@ -39,7 +38,7 @@ class PeeweeModule(ConfigurableModuleClass, NestipyModule):
             self._db.close()
 
     @classmethod
-    def for_feature(cls, *models: Type):
+    def for_feature(cls, *models: Model):
         for m in models:
             if Reflect.get_metadata(m, PeeweeMetadata.ModelMeta, False) and m not in cls._models:
                 cls._models.append(m)
