@@ -578,13 +578,13 @@ files = [
 
 [[package]]
 name = "nestipy"
-version = "0.2.7"
+version = "0.2.8"
 description = "Nestipy is a Python framework built on top of BlackSheep that follows the modular architecture of NestJS"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "nestipy-0.2.7-py3-none-any.whl", hash = "sha256:19a94598ac9034f95b8b3baf5ae9428a582e9cdefa0f7e9d41fa78e6cbbc0846"},
-    {file = "nestipy-0.2.7.tar.gz", hash = "sha256:2d97159ca6d091683922baa8da94e8566c6363d1b2baa9e0c79f2cb8b2f8aa1c"},
+    {file = "nestipy-0.2.8-py3-none-any.whl", hash = "sha256:7db795ea2c92aa8536e257192e823b8657cb1c1061aaad0d00b8244f0e852cdd"},
+    {file = "nestipy-0.2.8.tar.gz", hash = "sha256:8ea79e38297f2bc669cc1a7bfcfeca2d08dfbfaa982d8a39ad9ffeaf9a5ba77d"},
 ]
 
 [package.dependencies]
@@ -592,7 +592,7 @@ aiofiles = ">=23.2.1,<24.0.0"
 blacksheep = ">=2.0.7,<3.0.0"
 fastapi = ">=0.110.0,<0.111.0"
 minijinja = ">=2.0.1,<3.0.0"
-nestipy-dynamic-module = ">=0.1.6,<0.2.0"
+nestipy-dynamic-module = "0.1.7"
 nestipy-ioc = ">=0.1.30,<0.2.0"
 nestipy-metadata = ">=0.1.1,<0.2.0"
 pyee = ">=11.1.0,<12.0.0"
@@ -625,13 +625,13 @@ questionary = ">=2.0.1,<3.0.0"
 
 [[package]]
 name = "nestipy-dynamic-module"
-version = "0.1.6"
+version = "0.1.7"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "nestipy_dynamic_module-0.1.6-py3-none-any.whl", hash = "sha256:ff653d53ebd5db458563710add4dc2fb55cb8e47c973e66653c44b69392340a5"},
-    {file = "nestipy_dynamic_module-0.1.6.tar.gz", hash = "sha256:14af2161fb4de9f2e4b1d56413b44baf0889198d6c89cda27e38bd5959994744"},
+    {file = "nestipy_dynamic_module-0.1.7-py3-none-any.whl", hash = "sha256:afd3cd8275dc46b8ee3e2532c59136f3933a0e22b1e81e16ffed90c181736587"},
+    {file = "nestipy_dynamic_module-0.1.7.tar.gz", hash = "sha256:739e783a16a70bd0533be27b9334ff1616f2c6f1b9c58e44f194ebeeca0a3e54"},
 ]
 
 [package.dependencies]
@@ -1467,4 +1467,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "dcff80159cc2ae356e0b5d6e909596a4950b07ade579df55aab0e34833562d46"
+content-hash = "00e837c1a0f652838c7cb5eb9eee8110bd75e1f38dbc7877362dff779d131e33"
