@@ -1,6 +1,6 @@
 from typing import Type, cast, Callable
 
-from nestipy_metadata import SetMetadata
+from nestipy.metadata import SetMetadata
 from peewee import Model as BaseModel
 
 from .peewee_meta import PeeweeMetadata

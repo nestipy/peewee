@@ -2,9 +2,9 @@ import inspect
 from dataclasses import asdict
 from typing import Type
 from nestipy.common import Module
-from nestipy_dynamic_module import NestipyModule
-from nestipy_ioc import Inject
-from nestipy_metadata import Reflect
+from nestipy.dynamic_module import NestipyModule
+from nestipy.ioc import Inject
+from nestipy.metadata import Reflect
 from peewee import Model, Database, SqliteDatabase, MySQLDatabase, PostgresqlDatabase
 
 from .peewee_builder import ConfigurableModuleClass, PEEWEE_DB_CONFIG

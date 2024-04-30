@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Literal
 
-from nestipy_dynamic_module import ConfigurableModuleBuilder, DynamicModule
+from nestipy.dynamic_module import ConfigurableModuleBuilder, DynamicModule
 
 
 @dataclass
