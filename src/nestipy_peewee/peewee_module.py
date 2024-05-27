@@ -1,20 +1,20 @@
 import inspect
 from dataclasses import asdict
-from typing import Type
+from typing import Type, Annotated
 from nestipy.common import Module
 from nestipy.dynamic_module import NestipyModule
 from nestipy.ioc import Inject
 from nestipy.metadata import Reflect
 from peewee import Model, Database, SqliteDatabase, MySQLDatabase, PostgresqlDatabase
 
-from .peewee_builder import ConfigurableModuleClass, PEEWEE_DB_CONFIG
+from .peewee_builder import ConfigurableModuleClass, PEEWEE_DB_CONFIG, PeeweeConfig
 from .peewee_meta import PeeweeMetadata
 
 
 @Module()
 class PeeweeModule(ConfigurableModuleClass, NestipyModule):
     _db: Database
-    _config: Inject[PEEWEE_DB_CONFIG]
+    _config: Annotated[PeeweeConfig, Inject(PEEWEE_DB_CONFIG)]
     _models: list = []
     _peewee_models: list = []
 
