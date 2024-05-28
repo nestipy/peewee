@@ -1,5 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Literal
+from peewee import Model as BaseModel
 
 from nestipy.dynamic_module import ConfigurableModuleBuilder, DynamicModule
 
@@ -12,6 +13,7 @@ class PeeweeConfig:
     user: str = ''
     password: str = 3306
     database: str = ''
+    models: list[BaseModel] = field(default_factory=lambda: [])
     # options: dict = field(default_factory=lambda: {})
 
 

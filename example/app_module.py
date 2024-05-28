@@ -3,6 +3,7 @@ from nestipy_config import ConfigModule, ConfigOption, ConfigService
 
 from app_controller import AppController
 from app_service import AppService
+from src.user.user_model import User
 from nestipy_peewee import PeeweeConfig, PeeweeModule
 from src.user.user_module import UserModule
 
@@ -14,7 +15,8 @@ async def peewee_factory(config: ConfigService) -> PeeweeConfig:
         user=config.get('DB_USER'),
         password=config.get('DB_PASSWORD'),
         port=int(config.get('DB_PORT')),
-        database=config.get('DB_DATABASE')
+        database=config.get('DB_DATABASE'),
+        models=[User]
     )
 
 
@@ -28,7 +30,8 @@ async def peewee_factory(config: ConfigService) -> PeeweeConfig:
         #         user='root',
         #         password='',
         #         port=3306,
-        #         database='nestipy'
+        #         database='nestipy',
+        #         models=[User]
         #     )
         # ),
         PeeweeModule.for_root_async(

@@ -1,6 +1,7 @@
 import inspect
 from dataclasses import asdict
-from typing import Type, Annotated
+from typing import Type, Annotated, Optional
+
 from nestipy.common import Module
 from nestipy.dynamic_module import NestipyModule
 from nestipy.ioc import Inject
@@ -21,6 +22,7 @@ class PeeweeModule(ConfigurableModuleClass, NestipyModule):
     async def on_startup(self):
         config_dict = asdict(self._config)
         del config_dict['driver']
+        del config_dict["models"]
         match self._config.driver:
             case 'sqlite':
                 self._db = SqliteDatabase(**config_dict)
@@ -28,6 +30,7 @@ class PeeweeModule(ConfigurableModuleClass, NestipyModule):
                 self._db = PostgresqlDatabase(**config_dict)
             case _:
                 self._db = MySQLDatabase(**config_dict)
+        self._models += self._config.models
         self._setup_model()
         await self.on_shutdown()
         self._db.connect()

@@ -8,7 +8,7 @@ from .user_service import UserService
 
 @Module(
     imports=[
-        PeeweeModule.for_feature(User)
+        # PeeweeModule.for_feature(User)
     ],
     providers=[UserService],
     controllers=[UserController]
